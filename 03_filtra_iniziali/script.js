@@ -5,8 +5,27 @@ const names = ["Anna", "Luca", "Marco", "Adele", "Laura", "Alessandra"];
 
 // Dichiara la funzione qui.
 
+function namesFilter(arr, char) {
+
+  const filteredArr = []
+  for (let i = 0; i < arr.length; i++) {
+    const thisName = arr[i];
+    const initial = thisName.charAt(0).toLowerCase()
+
+    if (initial === char.toLowerCase()) {
+      filteredArr.push(thisName)
+    }
+
+  }
+  return filteredArr;
+}
+
 
 // Invoca la funzione qui e stampa il risultato in console
+
+const filterName = namesFilter(names, "a");
+console.log(filterName);
+
 
 
 
